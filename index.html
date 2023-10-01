@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习第一章</title>
+    <style>
+        body{
+            margin:0;
+            height: 100vh;
+            background-color: #eee;
+        }
+        /* *{
+            border: 1px solid black;
+        } */
+        .yinying{
+            box-shadow: 6px 4px 3px #00ccff;
+        }
+        .flex{
+            display: flex;
+        }
+        .baise{
+            background-color: white;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .bianju{
+            margin: 8px;
+        }
+        .youbianju{
+            margin-right: 8px;
+        }
+        .shangbianju{
+            margin-top: 8px;
+        }
+        .daohang{
+            padding: 20px 25px;
+            border-bottom:3px solid #00ccff;
+            font-size: 14px;
+            color: #125cb1;
+        }
+        /*以下当屏幕小于600时*/
+        @media (max-width:600px) {
+            .cebianlan{
+                display: none;
+            }
+            .neirong{
+                flex-direction: column;
+            }
+            .shuju{
+                flex-direction: column;
+            }
+            .youqu{
+                margin-left: 8px;
+            }
+            .shuju{
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
+    </style>
+</head>
+<body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px;z-index: 2;" class=" cebianlan baise yinying">
+    <!--头像栏-->
+    <div style="padding: 10px;align-items: center; justify-content: center;border-bottom: 3px solid #00ccff;" class="flex">
+        <img src="90.jpg"
+         width="70px" 
+         height="70px" 
+         alt="头像">
+         <div style="margin-left: 10px;font-size: 30px;">星星</div>
+    </div>
+    <!--导航栏-->
+    <div class="flex1">
+        <div style="font-size: 20px;" class="daohang">导航</div>
+        <div style="font-size: 20px;" class="daohang">导航</div>
+        <div style="font-size: 20px;" class="daohang">导航</div>
+        <div style="font-size: 20px;" class="daohang">导航</div>
+    </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部栏-->
+    <div style="height: 60px; z-index: 1;" class="baise yinying"></div>
+     <!--内容区-->
+     <div style="overflow: auto;" class="flex1 flex neirong">
+        <!--左区-->
+        <div style="flex: 3" class="flex column bianju">
+        <!--数据区-->
+        <div class="flex shuju">
+            <!--数据块-->
+            <div style="height: 100px;" class="shuju flex1 baise youbianju yinying" ></div>
+            <div style="height: 100px;" class="shuju flex1 baise youbianju yinying"></div>
+            <div style="height: 100px;" class="shuju flex1 baise youbianju yinying"></div>
+            <div style="height: 100px;" class="shuju flex1 baise youbianju yinying"></div>
+            <div style="height: 100px;" class="shuju flex1 baise yinying"></div>
+        </div>
+        <!--列表区-->
+        <div class="flex column">
+            <!--列表项-->
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+            <div style="height: 160px;" class="baise shangbianju yinying"></div>
+        </div>
+    </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex column shangbianju youbianju youqu cebianlan">
+        <!--提示区-->
+        <div style="height: 200px;" class="baise yinying"></div>
+        <!--消息区-->
+        <div style="height: 300px;" class="baise shangbianju yinying"></div>    
+     </div>
+    </div>
+</body>   
+</html>
